@@ -1,0 +1,33 @@
+<form #authForm = "ngForm" (ngSubmit)="onSubmit(authForm)"> 
+  <div class="imgcontainer">
+    <img src="http://www.shatel.ir/file/2016/10/shatel.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" 
+    placeholder="Enter Username" 
+    ngModel
+    name="uname" 
+    required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" 
+    placeholder="Enter Password" 
+    ngModel
+    name="psw" 
+    required
+    minlength="8"
+    >
+
+    <button type="submit" class="loginbtn" >Login</button>
+    <label style="display:block">
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>

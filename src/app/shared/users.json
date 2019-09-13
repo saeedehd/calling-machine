@@ -1,0 +1,21 @@
+[{
+    "username": "saeedeh",
+    "password": "Home",
+    "authorization": "admin"
+},
+{
+    "username": "khashayar",
+    "password": "&Uuml;ber uns",
+    "authorization": "admin"
+},
+{
+    "username": "reza",
+    "password": "Events",
+    "authorization": "user"
+},
+{
+    "username": "soshians",
+    "password": "Galerie",
+    "authorization": "user"
+}
+]

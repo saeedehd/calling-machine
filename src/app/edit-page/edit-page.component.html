@@ -1,0 +1,21 @@
+<h1>Edit Page</h1>
+<button (click)="showed = !showed" [disabled]="showed">Show my Lists</button>
+<div *ngIf="showed">
+    <table>
+        <thead>
+            <th>List ID</th>
+            <th>Number of Call</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </thead>
+    </table>
+    <tbody>
+        <tr *ngFor="let list of lists ">
+            <td>{{list.listId}}</td>
+            <td>{{list.capacity}}</td>
+            <td><button>Delete</button></td>
+            <td><button>Edit</button></td>
+        </tr>
+    </tbody>
+</div>
+
