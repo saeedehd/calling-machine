@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthenticateComponent } from '../app/authenticate/authenticate.component';
 import { EditPageComponent } from '../app/edit-page/edit-page.component';
+import { SidenavComponent } from '../app/sidenav/sidenav.component';
 
 const routes: Routes = [
   { path: 'authentication' , component: AuthenticateComponent},
-  { path: 'edit' , component: EditPageComponent}
+  { path: 'edit' , component: EditPageComponent},
+  { path: 'sideNav' , component: SidenavComponent },
 ];
 
 @NgModule({

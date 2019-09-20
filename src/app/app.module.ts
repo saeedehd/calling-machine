@@ -9,6 +9,13 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { HeaderComponent } from './header/header.component';
 import { EditListComponent } from './edit-list/edit-list.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -17,12 +24,19 @@ import { EditPageComponent } from './edit-page/edit-page.component';
     HeaderComponent,
     EditListComponent,
     EditPageComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
