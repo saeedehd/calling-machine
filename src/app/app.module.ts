@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
-import { HeaderComponent } from './header/header.component';
 import { EditListComponent } from './edit-list/edit-list.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -21,7 +20,6 @@ import {MatListModule} from '@angular/material/list';
   declarations: [
     AppComponent,
     AuthenticateComponent,
-    HeaderComponent,
     EditListComponent,
     EditPageComponent,
     SidenavComponent,

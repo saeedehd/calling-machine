@@ -5,6 +5,7 @@ import { EditPageComponent } from '../app/edit-page/edit-page.component';
 import { SidenavComponent } from '../app/sidenav/sidenav.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/authentication', pathMatch: 'full' },
   { path: 'authentication' , component: AuthenticateComponent},
   { path: 'edit' , component: EditPageComponent},
   { path: 'sideNav' , component: SidenavComponent },
