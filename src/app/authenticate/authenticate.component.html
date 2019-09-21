@@ -1,33 +1,33 @@
-<form #authForm = "ngForm" (ngSubmit)="onSubmit(authForm)"> 
-  <div class="imgcontainer">
-    <img src="http://www.shatel.ir/file/2016/10/shatel.png" alt="Avatar" class="avatar">
-  </div>
+<div fxLayout="row" fxLayoutAlign="center center" class="container">
+  <mat-card fxFlex="500px">
+    <mat-card-header>
+      <mat-card-title></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="formGroup" fxLayout="column">
+        <img fxFlex="50px" fxFlexAlign="center" src="http://www.shatel.ir/file/2016/10/shatel.png" alt="Avatar">
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" 
-    placeholder="Enter Username" 
-    ngModel
-    name="uname" 
-    required>
+        <mat-form-field fxFlex>
+          <input type="text" matInput placeholder="Enter Username" formControlName="username">
+        </mat-form-field>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" 
-    placeholder="Enter Password" 
-    ngModel
-    name="psw" 
-    required
-    minlength="8"
-    >
+        <mat-form-field fxFlex>
+          <input type="password" matInput placeholder="Enter Password" formControlName="password">
+          <mat-error *ngIf="formGroup.get('password').invalid">dsfgdsfdsffsddsf</mat-error>
+        </mat-form-field>
 
-    <button type="submit" class="loginbtn" >Login</button>
-    <label style="display:block">
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+        <div fxFlex>
+          <mat-checkbox>Remember me</mat-checkbox>
+        </div>
+          
+      </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="button" [routerLink]="['/forget-password']" routerLinkActive="router-link-active" mat-button
+      color="primary" >{{'Forget Password' | translate}}</button>
+      <button type="button" (click)="submit()" mat-raised-button color="primary">{{'Login' | translate}}</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

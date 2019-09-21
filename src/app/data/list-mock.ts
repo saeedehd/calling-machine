@@ -1,4 +1,4 @@
-import { List } from '../list.model';
+import { List } from '../models/list.model';
 export const LISTS: List[] = [
     {listId: 1,userId: 1958,listStatus: 'uncompleted',capacity:45},
     {listId: 2,userId: 1958,listStatus: 'uncompleted',capacity:70},

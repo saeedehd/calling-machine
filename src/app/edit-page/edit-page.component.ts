@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { LISTS } from '../shared/list-mock';
-import { List } from '../list.model';
+import { LISTS } from '../data/list-mock';
+import { List } from '../models/list.model';
 @Component({
   selector: 'app-edit-page',
   templateUrl: './edit-page.component.html',
-  styleUrls: ['./edit-page.component.css']
+  styleUrls: ['./edit-page.component.scss']
 })
 export class EditPageComponent {
   settings = {
