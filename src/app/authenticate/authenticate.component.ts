@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
+<<<<<<< HEAD
+=======
+import { Observable } from 'rxjs';
+>>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
 
 import { AuthService, AuthResponseData } from '../services/auth.service';
 import { MatSnackBar } from '@angular/material';

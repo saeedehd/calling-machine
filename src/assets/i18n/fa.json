@@ -1,5 +1,10 @@
 {
+<<<<<<< HEAD
     "Login" : "ورود",
     "Forget Password" : "رمز خود را فراموش کردم",
     "Edit" : "ویرایش"
+=======
+    "Login" : "vorood",
+    "Forget Password" : "faramooshi"
+>>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
 }

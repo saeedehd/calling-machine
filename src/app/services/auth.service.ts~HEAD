@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap} from 'rxjs/operators';
 import { throwError, Subject} from 'rxjs';
-import { User } from '../authenticate/user.model';
+import { User } from '../models/user.model';
 
 export interface AuthResponseData {
   kind: string;
@@ -40,7 +40,7 @@ export class AuthService {
     );
   }
 
-  login(username: string, password: string) {
+  login({ username, password }: { username: string; password: string; }) {
     return this.http
     .post<AuthResponseData>('URL',
     {
