@@ -1,0 +1,71 @@
+<div fxLayout="column" fxLayoutAlign="center">
+    <mat-card fxFlex>
+        <mat-card-header>
+            <mat-card-title></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="formGroup" fxLayout="column">
+                <div fxLayoutGap="5%">
+                    <mat-form-field fxFlex>
+                        <input type="text"  matInput placeholder="ID" formControlName="id">
+                    </mat-form-field>
+            
+                    <mat-form-field fxFlex>
+                        <mat-label>Status</mat-label>
+                            <select matNativeControl formControlName="enable">
+                                <option value="1">1</option>
+                                <option value="0">0</option>
+                            </select>
+                    </mat-form-field> 
+
+                    <mat-form-field fxFlex>
+                            <input type="text"  matInput placeholder="Priority" formControlName="priority">
+                    </mat-form-field>
+                </div>
+                <div fxLayoutGap="5%">
+                        <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="Department" formControlName="department">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="Start working time" formControlName="start_working_time">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="End working time" formControlName="end_working_time">
+                            </mat-form-field>
+            
+                </div>
+                <div fxLayoutGap="5%">
+                        <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="nwd table id" formControlName="nwd_table_id">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="dialplan_context" formControlName="dialplan_context">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="Queue" formControlName="queue">
+                            </mat-form-field>
+                </div>
+                <div fxLayoutGap="5%">
+                        <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="url_id" formControlName="url_id">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="call_more" formControlName="call_more">
+                            </mat-form-field>
+            
+                            <mat-form-field fxFlex>
+                                <input type="text"  matInput placeholder="retry_time" formControlName="retry_time">
+                            </mat-form-field>
+                </div>       
+            </form>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="button" (click)="edit()" mat-raised-button color="primary">{{'Edit' | translate}}</button>
+          </mat-card-actions>
+    </mat-card>
+</div>

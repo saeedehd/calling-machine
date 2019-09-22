@@ -1,38 +1,35 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
-import { AuthService, AuthResponseData } from './auth.service';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
+
+import { AuthService, AuthResponseData } from '../services/auth.service';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
-  selector: 'app-authenticate',
-  templateUrl: './authenticate.component.html',
-  styleUrls: ['./authenticate.component.css']
+	selector: 'app-authenticate',
+	templateUrl: './authenticate.component.html',
+	styleUrls: [ './authenticate.component.scss' ]
 })
 export class AuthenticateComponent {
-  error: string = null;
+	formGroup: FormGroup;
 
-  constructor(private authService: AuthService) { }
+	constructor(private authService: AuthService, private snackbar: MatSnackBar) {
+		this.formGroup = new FormGroup({
+			username: new FormControl('', [ Validators.required, Validators.minLength(3) ]),
+			password: new FormControl('', [ Validators.required, Validators.minLength(8) ])
+		});
+	}
 
-  onSubmit(form: NgForm) {
-    if (!form.valid) {
-      return;
-    }
-    const username = form.value.uname;
-    const password = form.value.psw;
-    // tslint:disable-next-line: prefer-const
-    let authObs: Observable<AuthResponseData>;
+	submit() {
+		if (this.formGroup.invalid) return this.snackbar.open('etelaat sahih nist', null, { duration: 999 });
 
-    authObs = this.authService.login(username, password);
-    authObs.subscribe(
-      resData => {
-        console.log(resData);
-      },
-      errorMessage => {
-        console.log(errorMessage);
-        this.error = errorMessage;
-      }
-    );
-    form.reset();
-  }
-
+		this.authService.login(this.formGroup.value).subscribe(
+			(resData) => {
+				console.log(resData);
+			},
+			(errorMessage) => {
+				this.snackbar.open('noch', null, { duration: 999 });
+				console.log(errorMessage);
+			}
+		);
+	}
 }
