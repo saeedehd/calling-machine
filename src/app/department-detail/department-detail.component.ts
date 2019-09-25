@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 
-import { AuthService, AuthResponseData } from '../services/auth.service';
+import { AuthService } from '../services/auth.service';
 import { MatSnackBar } from '@angular/material';
 
 @Component({

@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,16 +16,9 @@ import {
 	MatButtonModule,
 	MatCardModule,
 	MatFormFieldModule,
-<<<<<<< HEAD
 	MatInputModule,
-	MatTableModule
-
+	MatTableModule,
 } from '@angular/material';
-import {CdkTableModule} from '@angular/cdk/table';
-=======
-	MatInputModule
-} from '@angular/material';
->>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -35,22 +29,19 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { EditPageComponent } from './edit-page/edit-page.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-<<<<<<< HEAD
 import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 import { DepartmentsComponent } from './departments/departments.component';
-=======
->>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
+import { DashabaordComponent } from './dashabaord/dashabaord.component';
+import { LogedInGuard } from './guards/loged-in.guard';
+
 
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-<<<<<<< HEAD
-	declarations: [ AppComponent, AuthenticateComponent, EditPageComponent, SidenavComponent, UploadFileComponent, DepartmentDetailComponent, DepartmentsComponent ],
-=======
-	declarations: [ AppComponent, AuthenticateComponent, EditPageComponent, SidenavComponent, UploadFileComponent ],
->>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
+
+	declarations: [ AppComponent, AuthenticateComponent, EditPageComponent, SidenavComponent, UploadFileComponent, DepartmentDetailComponent, DepartmentsComponent, DashabaordComponent ],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -64,6 +55,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		MatCardModule,
 		MatButtonModule,
 		MatToolbarModule,
+		MatTableModule,
 		MatInputModule,
 		MatFormFieldModule,
 		MatListModule,
@@ -78,15 +70,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 		}),
 		FormsModule,
 		FileUploadModule,
-<<<<<<< HEAD
 		Ng2SmartTableModule,
-		CdkTableModule,
-		MatTableModule
-=======
-		Ng2SmartTableModule
->>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
 	],
-	providers: [],
+	providers: [LogedInGuard],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

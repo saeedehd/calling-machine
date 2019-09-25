@@ -1,10 +1,33 @@
 {
-<<<<<<< HEAD
     "Login" : "ورود",
-    "Forget Password" : "رمز خود را فراموش کردم",
-    "Edit" : "ویرایش"
-=======
-    "Login" : "vorood",
-    "Forget Password" : "faramooshi"
->>>>>>> de979bdaf34574540beb9dc8e72a8ecd654d027d
+    "Error Passsword": "رمز شما صحیح نمی باشد",
+    "Remember Me": "مرا بخاطر بسپار",
+    "Edit": "ویرایش لیست",
+    "Insert": "آپلود فایل با شماره تلفن",
+    "upload":"آپلود",
+    "cancel":"لغو",
+    "Remove":"پاک کردن",
+    "UploadAll": "آپلود همه",
+    "Cancel All": "لغو همه",
+    "Remove All": "پاک کردن همه",
+    "Upload Queue": "صف آپلود",
+    "select files": "انتخاب فایل",
+    "Multiple": "چند تایی",
+    "singel": "تکی",
+    "settings":"لیست تنظیمات",
+    "Name": "نام",
+    "size": "سایز",
+    "progress": "وضعیت",
+    "CRM Upload": "آپلود فایل با کد اشتراک",
+    "settinge": "لیست تنظیمات",
+    "CRM": "انتخاب فایل با کد اشتراک",
+    "Tell": "انتخاب فایل با شماره تلفن",
+    "Username": "نام کاربری",
+    "U-hint": "حداقل 8 کاراکتر",
+    "password": "رمز عبور",
+    "Pass-hint": "حداقل 8 کاراکتر",
+    "email": "ایمیل",
+    "E-hint": "ایمیل را وارد کنید",
+    "save": "ثبت",
+    "department": "دپارتمان"
 }

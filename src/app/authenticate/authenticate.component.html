@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
 <div fxLayout="row" fxLayoutAlign="center center" class="container">
   <mat-card fxFlex="500px">
     <mat-card-header>
@@ -13,21 +21,25 @@
 
         <mat-form-field fxFlex>
           <input type="password" matInput placeholder="Enter Password" formControlName="password">
-          <mat-error *ngIf="formGroup.get('password').invalid">dsfgdsfdsffsddsf</mat-error>
+          <mat-error *ngIf="formGroup.get('password').invalid">{{'Error Password' | translate}}</mat-error>
         </mat-form-field>
 
 
         <div fxFlex>
-          <mat-checkbox>Remember me</mat-checkbox>
+          <mat-checkbox>{{ 'Remember Me' | translate}}</mat-checkbox>
         </div>
-          
+
       </form>
 
     </mat-card-content>
-    <mat-card-actions>
-      <button type="button" [routerLink]="['/forget-password']" routerLinkActive="router-link-active" mat-button
-      color="primary" >{{'Forget Password' | translate}}</button>
+      <mat-card-actions>
+      <!-- <button type="button" [routerLink]="['/forget-password']" routerLinkActive="router-link-active" mat-button
+      color="primary" >{{'Forget Password' | translate}}</button> -->
       <button type="button" (click)="submit()" mat-raised-button color="primary">{{'Login' | translate}}</button>
     </mat-card-actions>
   </mat-card>
 </div>
+
+  </body>
+</html>
+

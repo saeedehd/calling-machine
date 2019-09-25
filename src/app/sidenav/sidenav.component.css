@@ -34,3 +34,48 @@ a {
   display: block;
   padding: 20px;
 }
+
+*
+{
+  font-size:17px;
+}
+
+.mat-drawer-content
+{
+  background-image: linear-gradient(to left, #b2d3f8, #b8d5f8, #bed7f7, #c4d9f7, #c9dbf6);
+}
+
+
+mat-nav-list a
+{
+  border-bottom:1px solid lightgray;
+}
+
+mat-nav-list a:hover
+{
+  background-color: #acf2fc;
+  transition: 0.5s;
+}
+
+a
+{
+  padding: 20px;
+}
+
+label
+{
+  float:right;
+  border-bottom:1px solid lightgray;
+  margin-right:40px;
+
+}
+
+
+account_box i
+{
+  margin-left:10px;
+}
+
+
+
+

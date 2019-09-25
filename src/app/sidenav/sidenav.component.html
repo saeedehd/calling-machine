@@ -1,6 +1,6 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <button mat-icon-button (click)="snav.toggle()" *ngIf="authenticated"><mat-icon>menu</mat-icon></button>
     <h1 class="example-app-name">Calling Machine</h1>
   </mat-toolbar>
 
@@ -8,16 +8,22 @@
                          [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <mat-nav-list>
 
-          <a routerLink="/authentication">Login</a>
-          <a routerLink="/edit">Edit</a>
-          <a routerLink="/insert">Insert</a>
-          <a href="/departments">Departments</a>
+      <mat-nav-list *ngIf="authenticated">
+          <label>{{'settinge' | translate}}</label><br/><br/>
+
+
+          <a routerLink="/edit">{{'Edit' | translate}}</a>
+          <a routerLink="insert">{{'Insert' | translate}}</a>
+          <a [routerLink]="['/department']" routerLinkActive="router-link-active" >{{'department' | translate}}</a>
+          <a routerLink="/login">{{'Login' | translate}}</a>
+
+
+          <!-- <a href="#">Four</a> -->
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <router-outlet></router-outlet>
+      <router-outlet></router-outlet>    
     </mat-sidenav-content>
 
     </mat-sidenav-container>
