@@ -23,6 +23,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FileUploadModule } from 'ng2-file-upload';
+import { NgxGaugeModule } from 'ngx-gauge';
+
 
 import { AppComponent } from './app.component';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
@@ -71,6 +73,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		FormsModule,
 		FileUploadModule,
 		Ng2SmartTableModule,
+		NgxGaugeModule
 	],
 	providers: [LogedInGuard],
 	bootstrap: [ AppComponent ]

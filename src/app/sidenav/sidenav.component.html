@@ -10,10 +10,7 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
 
       <mat-nav-list *ngIf="authenticated">
-          <label>{{'settinge' | translate}}</label><br/><br/>
-
-
-          <a routerLink="/edit">{{'Edit' | translate}}</a>
+          <a routerLink="/dashboard">{{'Dashboard' | translate}}</a>
           <a routerLink="insert">{{'Insert' | translate}}</a>
           <a [routerLink]="['/department']" routerLinkActive="router-link-active" >{{'department' | translate}}</a>
           <a routerLink="/login">{{'Login' | translate}}</a>
