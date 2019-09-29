@@ -38,12 +38,14 @@ a {
 *
 {
   font-size:17px;
+
+
 }
 
-.mat-drawer-content
+/* .mat-drawer-content
 {
   background-image: linear-gradient(to left, #b2d3f8, #b8d5f8, #bed7f7, #c4d9f7, #c9dbf6);
-}
+} */
 
 
 mat-nav-list a
@@ -59,7 +61,7 @@ mat-nav-list a:hover
 
 a
 {
-  padding: 20px;
+  padding: 25px;
 }
 
 label
@@ -75,6 +77,8 @@ account_box i
 {
   margin-left:10px;
 }
+
+
 
 
 

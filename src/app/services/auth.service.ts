@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap, delay, map } from 'rxjs/operators';
 import { throwError, Subject, Observable, of, BehaviorSubject } from 'rxjs';
-import {  MOCK_admin_user } from '../data/list-mock';
+import {  MOCK_admin_user, MOCK_operator_user } from '../data/list-mock';
+import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 
 const LOCAL_STORAGE_KEY = 'user';
@@ -13,18 +14,18 @@ const LOCAL_STORAGE_KEY = 'user';
 export class AuthService {
 	user = new BehaviorSubject<User>(null);
 
-	constructor(private http: HttpClient) {
+	constructor(private http: HttpClient, private router: Router) {
 
     debugger;
     var stringified_user = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if(stringified_user){
+    if (stringified_user) {
       const user = JSON.parse(stringified_user);
       this.user.next(user);
     }
 
 		this.user.subscribe((user) => {
-			if (user) localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(user));
-			else localStorage.removeItem(LOCAL_STORAGE_KEY);
+			if (user) localStorage.setItem( LOCAL_STORAGE_KEY, JSON.stringify(user));
+			else localStorage.removeItem( LOCAL_STORAGE_KEY );
 		});
 	}
 
@@ -42,9 +43,14 @@ export class AuthService {
 	//   );
 	// }
 
+
   logout(){
     localStorage.removeItem(LOCAL_STORAGE_KEY);
+    this.router.navigate(['/login']);
   }
+
+
+
 
 	login({ username, password }: { username: string; password: string }): Observable<User> {
 		// return this.http
@@ -55,7 +61,9 @@ export class AuthService {
 				return this.handleAuthentication(resData);
 			})
 		);
-	}
+  }
+
+
 	private handleAuthentication(user: User) {
 		var user = new User(user);
 		this.user.next(user);

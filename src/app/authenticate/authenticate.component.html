@@ -7,7 +7,7 @@
   <body>
 
 <div fxLayout="row" fxLayoutAlign="center center" class="container">
-  <mat-card fxFlex="500px">
+  <mat-card fxFlex="550px">
     <mat-card-header>
       <mat-card-title></mat-card-title>
     </mat-card-header>
@@ -16,18 +16,18 @@
         <img fxFlex="50px" fxFlexAlign="center" src="http://www.shatel.ir/file/2016/10/shatel.png" alt="Avatar">
 
         <mat-form-field fxFlex>
-          <input type="text" matInput placeholder="Enter Username" formControlName="username">
+          <input type="text" matInput placeholder="نام کاربری..." formControlName="username">
         </mat-form-field>
 
         <mat-form-field fxFlex>
-          <input type="password" matInput placeholder="Enter Password" formControlName="password">
+          <input type="password" matInput placeholder="رمز عبور..." formControlName="password">
           <mat-error *ngIf="formGroup.get('password').invalid">{{'Error Password' | translate}}</mat-error>
         </mat-form-field>
 
-
+<!--
         <div fxFlex>
           <mat-checkbox>{{ 'Remember Me' | translate}}</mat-checkbox>
-        </div>
+        </div> -->
 
       </form>
 
@@ -35,10 +35,18 @@
       <mat-card-actions>
       <!-- <button type="button" [routerLink]="['/forget-password']" routerLinkActive="router-link-active" mat-button
       color="primary" >{{'Forget Password' | translate}}</button> -->
-      <button type="button" (click)="submit()" mat-raised-button color="primary">{{'Login' | translate}}</button>
+      <button type="button" (click)="submit()" mat-raised-button color="primary">{{'login' | translate}}</button>
+
     </mat-card-actions>
+
+    <button mat-button type="button" color="warn" *ngIf="">{{'Logout' | translate}}</button>
+
   </mat-card>
+
 </div>
+
+
+
 
   </body>
 </html>

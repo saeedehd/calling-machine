@@ -16,6 +16,7 @@ export class AuthenticateComponent {
   formGroup: FormGroup;
 
 
+
   constructor(
     private router: Router,
     private authService: AuthService,
@@ -33,6 +34,9 @@ export class AuthenticateComponent {
     });
   }
 
+
+
+
   submit() {
     if (this.formGroup.invalid)
       return this.snackbar.open("اطلاعات صحیح نیست", null, { duration: 999 });
@@ -44,7 +48,7 @@ export class AuthenticateComponent {
         this.router.navigate(["/dashboard"]);
       },
       errorMessage => {
-        this.snackbar.open("noch", null, { duration: 999 });
+        this.snackbar.open("اطلاعات اشتباه بود", null, { duration: 999 });
         console.log(errorMessage);
       }
     );

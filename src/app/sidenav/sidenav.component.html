@@ -1,7 +1,8 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="example-toolbar">
-    <button mat-icon-button (click)="snav.toggle()" *ngIf="authenticated"><mat-icon>menu</mat-icon></button>
+    <!-- <button mat-icon-button (click)="snav.toggle()" *ngIf="authenticated"><mat-icon>menu</mat-icon></button> -->
     <h1 class="example-app-name">Calling Machine</h1>
+
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container"
@@ -10,9 +11,12 @@
                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
 
       <mat-nav-list *ngIf="authenticated">
+          <!-- <label>{{'settinge' | translate}}</label><br/><br/> -->
+
+
           <a routerLink="/dashboard">{{'Dashboard' | translate}}</a>
           <a routerLink="insert">{{'Insert' | translate}}</a>
-          <a [routerLink]="['/department']" routerLinkActive="router-link-active" >{{'department' | translate}}</a>
+          <a [routerLink]="['/department']" routerLinkActive="router-link-active" >{{'Department' | translate}}</a>
           <a routerLink="/login">{{'Login' | translate}}</a>
 
 
@@ -20,7 +24,7 @@
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-      <router-outlet></router-outlet>    
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
 
     </mat-sidenav-container>

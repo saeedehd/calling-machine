@@ -4,12 +4,30 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
 import { MatSnackBar } from '@angular/material';
 
+
+export interface Num {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-department-detail',
   templateUrl: './department-detail.component.html',
   styleUrls: ['./department-detail.component.scss']
 })
 export class DepartmentDetailComponent  {
+
+    num: Num[] = [
+      {value: '1', viewValue: '1'},
+      {value: '2', viewValue: '2'},
+    ];
+
+
+
+
+
+
+
+
   formGroup: FormGroup;
 	constructor(private authService: AuthService, private snackbar: MatSnackBar) {
 		this.formGroup = new FormGroup({

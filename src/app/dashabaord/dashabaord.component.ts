@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-dashabaord',
@@ -7,23 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashabaordComponent implements OnInit {
 
-  gaugeType = "full";
-  gaugeValue = 600;
-  gaugeLabel = "Number of Calls";
-  gaugeAppendText = "Number";
-  gaugeThick = 20;
-  gaugeMin = 0;
-  gaugeMax = 2500;
 
-  
 
-  constructor() {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad GuagePage');
-  }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  logout(){
+    this.authService.logout();
   }
 
 }
