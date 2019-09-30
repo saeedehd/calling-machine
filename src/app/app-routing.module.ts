@@ -8,37 +8,38 @@ import * as user from 'src/app/shared/users.json';
 import { LogedInGuard } from './guards/loged-in.guard';
 import { DashabaordComponent } from './dashabaord/dashabaord.component';
 import { MenubarComponent } from './menubar/menubar.component';
+import { DashabaordGuard } from './guards/dashboard.guard';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-	{ path: '', redirectTo: '/login', pathMatch: 'full' },
-	{
-		path: 'dashboard',
-		component: DashabaordComponent,
-		canActivate: [ LogedInGuard ]
-	},
-	{
-		path: 'login',
-		component: AuthenticateComponent
-  },
-
-	{
-		path: 'insert',
-		component: UploadFileComponent,
-		canActivate: [ LogedInGuard ]
-	},
-	{
-		path: 'department',
-		component: DepartmentsComponent,
-		canActivate: [ LogedInGuard ]
-	},
-	{
-		path: 'department/:id/edit',
-		component: DepartmentDetailComponent
-  },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path: 'menu',
-    component: MenubarComponent
-  }
+    path: 'login',
+    component: AuthenticateComponent
+  },
+	{
+		path: '',
+		component: LayoutComponent,
+    canActivate: [ LogedInGuard ],
+    children:[
+      {
+        path: 'dashboard',
+        component: DashabaordComponent
+      },
+     {
+        path: 'insert',
+        component: UploadFileComponent
+      },
+      {
+        path: 'department',
+        component: DepartmentsComponent
+      },
+      {
+        path: 'department/:id/edit',
+        component: DepartmentDetailComponent
+      }
+    ]
+	}
 
 ];
 

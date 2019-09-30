@@ -1,14 +1,14 @@
 import { Component, EventEmitter } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
- 
+
 function readBase64(file): Promise<any> {
     var reader  = new FileReader();
     var future = new Promise((resolve, reject) => {
-      reader.addEventListener("load", function () {
+      reader.addEventListener('load', function () {
         resolve(reader.result);
       }, false);
 
-      reader.addEventListener("error", function (event) {
+      reader.addEventListener('error', function (event) {
         reject(event);
       }, false);
 
@@ -26,21 +26,21 @@ const URL = 'http://localhost:4000/api/upload';
   styleUrls: ['./upload-file.component.css']
 })
 export class UploadFileComponent {
-  public uploader:FileUploader = new FileUploader({
-    url: URL, 
-    disableMultipart:true
+  public uploader: FileUploader = new FileUploader({
+    url: URL,
+    disableMultipart: true
     });
-  public hasBaseDropZoneOver:boolean = false;
+  public hasBaseDropZoneOver: boolean = false;
   public hasAnotherDropZoneOver:boolean = false;
 
   fileObject: any;
 
 
-  public fileOverBase(e:any):void {
-    this.hasBaseDropZoneOver = e; 
+  public fileOverBase(e: any): void {
+    this.hasBaseDropZoneOver = e;
   }
- 
-  public fileOverAnother(e:any):void {
+
+  public fileOverAnother(e: any): void {
     this.hasAnotherDropZoneOver = e;
   }
 

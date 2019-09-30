@@ -44,7 +44,7 @@ export class AuthenticateComponent {
     this.authService.login(this.formGroup.value).subscribe(
       resData => {
         debugger;
-        this.snackbar.open("ثبت نام کامل", null, { duration: 2222 });
+        this.snackbar.open("به پنل خوش آمدید", null, { duration: 2222 });
         this.router.navigate(["/dashboard"]);
       },
       errorMessage => {

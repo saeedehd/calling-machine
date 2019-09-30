@@ -1,16 +1,18 @@
+
 body
 {
   background-image: linear-gradient(to left, #bedeed, #b6ddef, #addcf1, #a4dbf4, #9bdaf6);
 }
 
+
 *
 {
+
   margin-right:20px;
-  margin-top:20px;
   font-size:14px;
   direction: rtl;
-  font-family: 'IranianSansRegular';
 }
+/*
 
 .btn
 {
@@ -20,6 +22,7 @@ body
   border-radius: 4px;
   text-align: center;
 }
+
 h3
 {
   text-align: center;
@@ -45,5 +48,7 @@ label
 {
   margin-top:20px;
 }
+*/
+
 
 

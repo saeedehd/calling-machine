@@ -6,9 +6,9 @@
         <mat-card-content>
             <form [formGroup]="formGroup" fxLayout="column">
                 <div fxLayoutGap="5%">
-                     <mat-form-field fxFlex>
+                     <!-- <mat-form-field fxFlex>
                          <input type="text"  matInput placeholder="ID" formControlName="id">
-                    </mat-form-field>
+                    </mat-form-field> -->
 
                     <mat-form-field fxFlex>
                         <mat-label>Status</mat-label>
@@ -76,5 +76,28 @@
          <button type="button" (click)="edit()" mat-raised-button color="primary">{{'save' | translate}}</button>
           </mat-card-actions>
     </mat-card>
-</div>
+</div><br/>
+
+<!-- version 2 department detail -->
+
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title></mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+      <div class="container" fxLayout="row" fxLayoutAlign="center center">
+          <form class="demo-form" fxLayout="column">
+            <material-timepicker color="primary"
+            label="Start working Time"
+            [userTime]="exportTime"
+            (change)="onChangeHour($event)"
+            revertLabel="Ok"></material-timepicker>
+          </form>
+        </div>
+
+  </mat-card-content>
+
+</mat-card>
+
 

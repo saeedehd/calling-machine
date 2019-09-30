@@ -16,6 +16,15 @@ export interface Num {
 })
 export class DepartmentDetailComponent  {
 
+
+  name = 'Angular';
+  private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
+
+  onChangeHour(event) {
+    console.log('event', event);
+  }
+
+    // tslint:disable-next-line: member-ordering
     num: Num[] = [
       {value: '1', viewValue: '1'},
       {value: '2', viewValue: '2'},
@@ -46,7 +55,11 @@ export class DepartmentDetailComponent  {
 		});
 	}
   edit() {
-		if (this.formGroup.invalid) return this.snackbar.open('اطلاعات صحیح نیست', null, { duration: 999 });
+    if (this.formGroup.invalid) { return this.snackbar.open(' اطلاعات کامل نیست', null, { duration: 999 }); }
+
+    else  {(this.formGroup.valid)} return this.snackbar.open('اطلاعات ثبت شد ', null, {duration : 999}
+
+    )
 
 		this.authService.login(this.formGroup.value).subscribe(
 			(resData) => {

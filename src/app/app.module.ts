@@ -20,8 +20,10 @@ import {
   MatTableModule,
   MatMenuModule,
   MatSelectModule,
-  MatBottomSheetModule
+  MatBottomSheetModule,
+  MatTooltipModule
 } from '@angular/material';
+import { MaterialTimePickerModule } from '@candidosales/material-time-picker';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -38,13 +40,15 @@ import { DashabaordComponent } from './dashabaord/dashabaord.component';
 import { LogedInGuard } from './guards/loged-in.guard';
 import { Uploadfile } from './services/upload.service';
 import { MenubarComponent } from './menubar/menubar.component';
+import { DashabaordGuard } from './guards/dashboard.guard';
+import { LayoutComponent } from './layout/layout.component';
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
 
-	declarations: [ AppComponent, AuthenticateComponent,  SidenavComponent, UploadFileComponent, DepartmentDetailComponent, DepartmentsComponent, DashabaordComponent, MenubarComponent ],
+	declarations: [ AppComponent, AuthenticateComponent,  SidenavComponent, UploadFileComponent, DepartmentDetailComponent, DepartmentsComponent, DashabaordComponent, MenubarComponent, LayoutComponent ],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -67,6 +71,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatMenuModule,
     MatSelectModule,
     MatBottomSheetModule,
+    MatTooltipModule,
+    MaterialTimePickerModule,
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -78,7 +84,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 		FileUploadModule,
 		Ng2SmartTableModule,
 	],
-	providers: [LogedInGuard, Uploadfile],
+	providers: [LogedInGuard, DashabaordGuard, Uploadfile],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

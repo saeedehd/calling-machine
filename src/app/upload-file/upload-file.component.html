@@ -2,7 +2,7 @@
   <div fxLayout="20px;">
       <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
 
-          <h3>{{'select files' | translate}}</h3>
+          <h1>{{'select files' | translate}}</h1>
 
           <div ng2FileDrop
                [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
@@ -97,14 +97,14 @@
                       (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
                   <span class="glyphicon glyphicon-trash"></span> {{'Remove All' | translate}}
               </button> -->
-
+<!--
               <div fxLayout="row" fxLayoutAlign="space-evenly center">
                   <mat-checkbox>{{'CRM' | translate}}</mat-checkbox><br/>
                   <mat-checkbox>{{'Tell'| translate}}</mat-checkbox><br/>
 
                       <button mat-button>{{'save' | translate}}</button>
 
-              </div>
+              </div> -->
 
 
           </div>

@@ -25,9 +25,13 @@ export class AuthService {
 
 		this.user.subscribe((user) => {
 			if (user) localStorage.setItem( LOCAL_STORAGE_KEY, JSON.stringify(user));
-			else localStorage.removeItem( LOCAL_STORAGE_KEY );
+      else localStorage.removeItem( LOCAL_STORAGE_KEY );
 		});
-	}
+  }
+
+
+  /*/this code was for signup with api url/*/
+
 
 	// signup(username: string, password: string) {
 	//   return this.http.post<User>("URL", { username, password }).pipe(
@@ -41,16 +45,17 @@ export class AuthService {
 	//       );
 	//     })
 	//   );
-	// }
+  // }
 
+/*/ logout /*/
 
-  logout(){
+  logout()  {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
+    this.user.next(null);
     this.router.navigate(['/login']);
   }
 
-
-
+  /*/login /*/
 
 	login({ username, password }: { username: string; password: string }): Observable<User> {
 		// return this.http
@@ -68,7 +73,9 @@ export class AuthService {
 		var user = new User(user);
 		this.user.next(user);
 		return user;
-	}
+  }
+
+
 
 	private handleError(errorRes: HttpErrorResponse) {
 		let errorMessage = 'An unknown error occurred!';

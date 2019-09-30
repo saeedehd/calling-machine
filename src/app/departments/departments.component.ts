@@ -12,11 +12,10 @@ import { PeriodicElement } from '../interface/department';
 })
 export class DepartmentsComponent implements OnInit {
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-  displayedColumns: string[] = ['enable','priority','department','start_working_time',
-  'end_working_time', 'nwd_table_id','dialplan_context','queue','query_method','url_id',
-  'call_more', 'retry_time','action'];
+  // tslint:disable-next-line: max-line-length
+  displayedColumns: string[] = [ 'enable', 'priority',  'department', 'start_working_time', 'end_working_time', 'nwd_table_id', 'dialplan_context', 'queue', 'query_method', 'url_id', 'call_more',  'retry_time', 'action'];
 
-   selectedDepartment : PeriodicElement;
+   selectedDepartment: PeriodicElement;
 
    onselect(id: number) { console.log(id)};
 
@@ -29,8 +28,9 @@ export class DepartmentsComponent implements OnInit {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    id: 1,
+
     enable: 1,
+    id: 1,
     priority: 7,
     department: 'qm-pcs',
     start_working_time: '8:00:00',
@@ -44,8 +44,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     retry_time: 180,
   },
   {
-    id: 1,
     enable: 1,
+    id: 1,
     priority: 7,
     department: 'qm-pcs',
     start_working_time: '8:00:00',
@@ -59,8 +59,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     retry_time: 180,
   },
   {
+    enable: 1,
     id: 2,
-    enable: 1,
     priority: 7,
     department: 'qm-pcs',
     start_working_time: '8:00:00',
@@ -74,8 +74,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     retry_time: 180,
   },
   {
+    enable: 1,
     id: 3,
-    enable: 1,
     priority: 7,
     department: 'qm-pcs',
     start_working_time: '8:00:00',
@@ -89,8 +89,8 @@ const ELEMENT_DATA: PeriodicElement[] = [
     retry_time: 180,
   },
   {
-    id: 4,
     enable: 1,
+    id: 4,
     priority: 7,
     department: 'qm-pcs',
     start_working_time: '8:00:00',

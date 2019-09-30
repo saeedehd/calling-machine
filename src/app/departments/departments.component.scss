@@ -1,7 +1,8 @@
-table {
-    width: 100%;
-  }
 
+table
+{
+  margin-right:45px;
+}
 .mat-elevation-z8 th
 {
   right:30px;
@@ -9,9 +10,7 @@ table {
 
 table td
 {
-  text-align: center;
   padding: 40px;
-
 }
 
 table th
@@ -21,7 +20,6 @@ table th
   font-weight: bold;
   font-size: 14px;
   color:black;
-
 }
 
 body
@@ -29,10 +27,6 @@ body
   height: 30px;
 }
 
-*
-{
-  font-family: 'IranianSansRegular';
-  margin-top: 5px;
-}
+
 
 
