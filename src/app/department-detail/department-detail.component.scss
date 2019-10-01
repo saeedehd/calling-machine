@@ -1,39 +1,13 @@
-.mat-form-field-wrapper
-{
-  padding: 18px;
+:host{
+  display: block;
+  padding-top: 20px;
+}
+mat-form-field{
+  width: 100%;
 }
 
-.mat-form-field
-{
-  padding: 18px;
+.fields {
+  > div{
+    padding: 0 10px
+  }
 }
-
-.mat-form-field-infix
-{
-  padding: 18px;
-}
-
-.mat-raised-button
-{
-  cursor: pointer;
-}
-
-*
-{
-  font-family: 'IranianSansRegular';
-}
-
-.demo-form
-{
-  margin-top:40px;
-  font-size:14px;
-  width:50%;
-  padding: 10px;
-}
-
-
-label
-{
-  font-size:14px;
-}
-

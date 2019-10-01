@@ -16,26 +16,15 @@ export interface Num {
 })
 export class DepartmentDetailComponent  {
 
-
-  name = 'Angular';
-  private exportTime = { hour: 7, minute: 15, meriden: 'PM', format: 24 };
-
   onChangeHour(event) {
     console.log('event', event);
   }
 
     // tslint:disable-next-line: member-ordering
     num: Num[] = [
+      {value: '0', viewValue: '0'},
       {value: '1', viewValue: '1'},
-      {value: '2', viewValue: '2'},
     ];
-
-
-
-
-
-
-
 
   formGroup: FormGroup;
 	constructor(private authService: AuthService, private snackbar: MatSnackBar) {

@@ -1,3 +1,22 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span routerLink="/insert" class="example-fill-remaining-space">Second Line</span>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+<!--   
 <div class="menu">
   <div flexLayout="row" fxLayoutGap="20px">
     <button mat-button [matMenuTriggerFor]="aboveMenu" [routerLink]="['/insert']" routerLinkActive="router-link-active" *ngIf="authenticated">{{'Add list Number' | translate}}</button>
@@ -20,15 +39,14 @@
 
 
 
-
-    <!-- <button mat-button  [routerLink]="['/login']" routerLinkActive="router-link-active" >{{'login' | translate}}</button>
+<button mat-button  [routerLink]="['/login']" routerLinkActive="router-link-active" >{{'login' | translate}}</button>
     <mat-menu #afterMenu="matMenu" xPosition="after">
     </mat-menu> -->
 
     <!-- <button mat-button (click)="logout()">{{'logout' | translate}}</button> -->
 
 
-    <button mat-button [matMenuTriggerFor]="aboveMenu" >{{'Add list Number' | translate}}</button>
+    <!-- <button mat-button [matMenuTriggerFor]="aboveMenu" >{{'Add list Number' | translate}}</button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
       <button fxFlex="" mat-menu-item [routerLink]="['/insert']" routerLinkActive="router-link-active" >{{'crm' | translate}}</button>
       <button mat-menu-item [routerLink]="['/insert']" routerLinkActive="router-link-active" > {{'Tell' | translate}}</button>
@@ -39,8 +57,8 @@
   <mat-card-actions>
    <button mat-button  color="accent"><i style="margin-right:15px;"  id="icon" class="material-icons" fxFlex="nogrow" (click)="logout()" matTooltip="خروج" aria-label="Button that displays a tooltip when focused or hovered over">account_box</i></button>
   </mat-card-actions>
-  </div>
+  </div> -->
 
-</div>
+<!-- </div> -->
 
 <router-outlet></router-outlet>

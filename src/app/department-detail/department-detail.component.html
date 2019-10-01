@@ -1,103 +1,75 @@
-<div fxLayout="column" fxLayoutAlign="center">
-    <mat-card fxFlex>
+<div fxLayout="row" fxLayoutAlign="center">
+    <mat-card fxFlex="500px">
         <mat-card-header>
-            <mat-card-title></mat-card-title>
+            <mat-card-title>
+                ویرایش دپارتمان
+                <b>
+                    {{formGroup.get('department').value}}
+                </b>
+            </mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form [formGroup]="formGroup" fxLayout="column">
-                <div fxLayoutGap="5%">
-                     <!-- <mat-form-field fxFlex>
-                         <input type="text"  matInput placeholder="ID" formControlName="id">
-                    </mat-form-field> -->
-
-                    <mat-form-field fxFlex>
-                        <mat-label>Status</mat-label>
+            <form [formGroup]="formGroup">
+                <div fxLayout="row wrap" class="fields">
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <mat-label>Status</mat-label>
                             <mat-select>
 
-                            <mat-option *ngFor="let num of num" [value]="num.value">
-                              {{num.viewValue}}
-                            </mat-option>
-                          </mat-select>
+                                <mat-option *ngFor="let num of num" [value]="num.value">
+                                    {{num.viewValue}}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
-
-                            <!-- <select matNativeControl formControlName="enable"> -->
-                                <!-- <option value="1">1</option>
-                                <option value="0">0</option> -->
-
-
-
-                    <mat-form-field fxFlex>
-                            <input type="text"  matInput placeholder="Priority" formControlName="priority">
-                    </mat-form-field>
-                </div>
-                <div fxLayoutGap="5%">
-                        <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="Department" formControlName="department">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="Start working time" formControlName="start_working_time">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="End working time" formControlName="end_working_time">
-                            </mat-form-field>
-
-                </div>
-                <div fxLayoutGap="5%">
-                        <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="nwd table id" formControlName="nwd_table_id">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="dialplan_context" formControlName="dialplan_context">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="Queue" formControlName="queue">
-                            </mat-form-field>
-                </div>
-                <div fxLayoutGap="5%">
-                        <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="url_id" formControlName="url_id">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="call_more" formControlName="call_more">
-                            </mat-form-field>
-
-                            <mat-form-field fxFlex>
-                                <input type="text"  matInput placeholder="retry_time" formControlName="retry_time">
-                            </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="number" matInput placeholder="Priority" formControlName="priority">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Department" formControlName="department">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="time" matInput placeholder="Start working time"
+                                formControlName="start_working_time">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="time" matInput placeholder="End working time"
+                                formControlName="end_working_time">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="dialplan_context"
+                                formControlName="dialplan_context">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="Queue" formControlName="queue">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="call_more" formControlName="call_more">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="text" matInput placeholder="retry_time" formControlName="retry_time">
+                        </mat-form-field>
+                    </div>
                 </div>
             </form>
         </mat-card-content>
         <mat-card-actions>
-         <button type="button" (click)="edit()" mat-raised-button color="primary">{{'save' | translate}}</button>
-          </mat-card-actions>
+            <button type="button" (click)="edit()" mat-raised-button color="primary">{{'save' | translate}}</button>
+        </mat-card-actions>
     </mat-card>
-</div><br/>
-
-<!-- version 2 department detail -->
-
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title></mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-      <div class="container" fxLayout="row" fxLayoutAlign="center center">
-          <form class="demo-form" fxLayout="column">
-            <material-timepicker color="primary"
-            label="Start working Time"
-            [userTime]="exportTime"
-            (change)="onChangeHour($event)"
-            revertLabel="Ok"></material-timepicker>
-          </form>
-        </div>
-
-  </mat-card-content>
-
-</mat-card>
-
-
+</div>
