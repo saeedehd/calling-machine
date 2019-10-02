@@ -7,12 +7,11 @@ import { DepartmentDetailComponent } from './department-detail/department-detail
 import * as user from 'src/app/shared/users.json';
 import { LogedInGuard } from './guards/loged-in.guard';
 import { DashabaordComponent } from './dashabaord/dashabaord.component';
-import { MenubarComponent } from './menubar/menubar.component';
 import { DashabaordGuard } from './guards/dashboard.guard';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   {
     path: 'login',
     component: AuthenticateComponent

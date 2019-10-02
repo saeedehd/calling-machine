@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-dashabaord',
@@ -10,7 +10,7 @@ export class DashabaordComponent implements OnInit {
 
 
 
-  constructor(private authService: AuthService) { }
+  constructor() { }
 
   ngOnInit() {
   }

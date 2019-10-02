@@ -1,5 +1,5 @@
-<div fxLayout="row" fxLayoutAlign="center">
-    <mat-card fxFlex="500px">
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card fxFlex="700px">
         <mat-card-header>
             <mat-card-title>
                 ویرایش دپارتمان
@@ -13,7 +13,7 @@
                 <div fxLayout="row wrap" class="fields">
                     <div fxFlex="50">
                         <mat-form-field>
-                            <mat-label>Status</mat-label>
+                            <mat-label>Enable</mat-label>
                             <mat-select>
 
                                 <mat-option *ngFor="let num of num" [value]="num.value">
@@ -22,6 +22,7 @@
                             </mat-select>
                         </mat-form-field>
                     </div>
+
                     <div fxFlex="50">
                         <mat-form-field>
                             <input type="number" matInput placeholder="Priority" formControlName="priority">
@@ -46,7 +47,7 @@
                     </div>
                     <div fxFlex="50">
                         <mat-form-field>
-                            <input type="text" matInput placeholder="dialplan_context"
+                            <input type="number" matInput placeholder="nwd_table_id"
                                 formControlName="dialplan_context">
                         </mat-form-field>
                     </div>
@@ -55,14 +56,27 @@
                             <input type="text" matInput placeholder="Queue" formControlName="queue">
                         </mat-form-field>
                     </div>
+
                     <div fxFlex="50">
                         <mat-form-field>
-                            <input type="text" matInput placeholder="call_more" formControlName="call_more">
+                          <input type="number" matInput placeholder="url_id" formControlName="url_id">
+                        </mat-form-field>
+                    </div>
+
+                    <div fxFlex="50">
+                        <mat-form-field>
+                          <input type="text" matInput placeholder="query_method" formControlName="query_method">
                         </mat-form-field>
                     </div>
                     <div fxFlex="50">
                         <mat-form-field>
-                            <input type="text" matInput placeholder="retry_time" formControlName="retry_time">
+                            <input type="number" matInput placeholder="call_more" formControlName="call_more">
+                        </mat-form-field>
+                    </div>
+
+                    <div fxFlex="50">
+                        <mat-form-field>
+                            <input type="number" matInput placeholder="retry_time" formControlName="retry_time">
                         </mat-form-field>
                     </div>
                 </div>

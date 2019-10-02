@@ -1,6 +1,6 @@
-<div fxLayout="column-reverse" fxLayoutAlign="center">
-  <div fxLayout="20px;">
-      <div fxLayout="column" fxLayoutAlign="space-evenly stretch">
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <div fxLayout="30px;">
+      <div fxLayout="column"  fxLayoutAlign="space-evenly stretch">
 
           <h1>{{'select files' | translate}}</h1>
 
@@ -13,8 +13,6 @@
                class="well my-drop-zone">
               Drag & Drop Here
           </div>
-
-
 
 
           <!-- <div ng2FileDrop
@@ -33,7 +31,7 @@
           <input type="file" ng2FileSelect [uploader]="uploader" (onFileSelected)="onFileSelected($event)" accept=".CSV" /> -->
       </div>
 
-      <div class="col-md-9" style="margin-bottom: 40px">
+      <div class="col-md-12" style="margin-bottom: 40px">
 
           <h3>{{'Upload Queue' | translate}}</h3>
           <p>Queue length: {{ uploader?.queue?.length }}</p>
@@ -69,10 +67,7 @@
                               (click)="item.cancel()" [disabled]="!item.isUploading">
                           <span class="glyphicon glyphicon-ban-circle"></span> {{'cancel' | translate}}
                       </button>
-                      <!-- <button mat-button type="button" class="btn btn-danger btn-xs"
-                              (click)="item.remove()">
-                          <span class="glyphicon glyphicon-trash"></span> {{'Remove' | translate}}
-                      </button> -->
+
                   </td>
               </tr>
               </tbody>

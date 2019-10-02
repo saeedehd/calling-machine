@@ -4,51 +4,13 @@ body
   background-image: linear-gradient(to left, #bedeed, #b6ddef, #addcf1, #a4dbf4, #9bdaf6);
 }
 
-
-*
-{
-
-  margin-right:20px;
-  font-size:14px;
-  direction: rtl;
-}
-/*
-
 .btn
 {
-
-  font-size: 14px;
   cursor: pointer;
-  border-radius: 4px;
-  text-align: center;
 }
 
-h3
-{
-  text-align: center;
+
+:host{
+  display: block;
+  padding-top: 20px;
 }
-
-label
-{
-  text-align: center;
-
-}
-
-.glyphicon
-{
-  margin-top:15px;
-}
-
-.glyphicon glyphicon-upload
-{
-  margin-top:20px;
-}
-
-.btn btn-danger btn-s
-{
-  margin-top:20px;
-}
-*/
-
-
-

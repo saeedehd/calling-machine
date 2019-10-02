@@ -1,18 +1,10 @@
-<div class="mat-elevation-z8" >
+<div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" flex-align="center">
-
-    <!-- ID Column -->
-    <!-- <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> ID </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-    </ng-container> -->
-
     <!-- Enable Column -->
     <ng-container matColumnDef="enable">
       <th mat-header-cell *matHeaderCellDef> Enable </th>
       <td mat-cell *matCellDef="let element"> {{element.enable}} </td>
     </ng-container>
-
 
     <!-- priority Column -->
     <ng-container matColumnDef="priority">
@@ -45,11 +37,6 @@
       <td mat-cell *matCellDef="let element"> {{element.nwd_table_id}} </td>
     </ng-container>
 
-    <!-- dialplan_context Column -->
-    <ng-container matColumnDef="dialplan_context">
-      <th mat-header-cell *matHeaderCellDef> dialplan_context </th>
-      <td mat-cell *matCellDef="let element"> {{element.dialplan_context}} </td>
-    </ng-container>
 
     <!-- queue Column -->
     <ng-container matColumnDef="queue">
@@ -85,7 +72,7 @@
    <!-- action Column -->
    <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> action </th>
-      <td mat-cell *matCellDef="let element"><button mat-icon-button color="primary"[routerLink]="['/department',element.id,'edit']"><i class="material-icons">create</i></button></td>
+      <td mat-cell *matCellDef="let element"><button   matTooltip="ویرایش" mat mat-icon-button color="primary"[routerLink]="['/department',element.id,'edit']"><i class="material-icons">create</i></button></td>
     </ng-container>
 
 
